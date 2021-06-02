@@ -1,0 +1,10 @@
+[
+  {
+    "test_name": "Get existing user",
+    "user_id": 2
+  },
+  {
+    "test_name": "Get not existing user",
+    "user_id": 23
+  }
+]
