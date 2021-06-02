@@ -1,10 +1,12 @@
 [
   {
     "test_name": "Get existing user",
-    "user_id": 2
+    "user_id": 2,
+    "expected_status_code": 200
   },
   {
     "test_name": "Get not existing user",
-    "user_id": 23
+    "user_id": 23,
+    "expected_status_code": 404
   }
 ]
