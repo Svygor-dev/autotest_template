@@ -32,7 +32,7 @@ def pre_processor():
 @pytest.fixture
 def test_processor():
     test_processor = TestProcessor()
-    test_processor.api_service_client = ReqresApiClient()
+    test_processor.reqres_api_service = ReqresApiClient()
     return test_processor
 
 

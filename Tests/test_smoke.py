@@ -14,7 +14,7 @@ def test_mmg_smoke(data_smoke, pre_processor, test_processor, validator):
     Основные действия теста.
     Именно в этом блоке происходит имитация действий пользователя.
     """
-    result_api = test_processor.send_request()
+    result_api = test_processor.send_request(data_smoke.user_id)
 
     """
     Различные проверки.
@@ -22,5 +22,5 @@ def test_mmg_smoke(data_smoke, pre_processor, test_processor, validator):
      1) что вернулся код 200;
      2) проверка ответа по json-схеме
     """
-    # assert result_api.status_code == 200
-    # validator.validate_api_result_schema(result_api.text)
+    assert result_api.status_code == 200
+    validator.validate_api_result_schema(result_api.text)
