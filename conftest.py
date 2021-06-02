@@ -11,6 +11,7 @@ from config import Config
 def pytest_addoption(parser):
     parser.addoption(
         "--stand",
+        default="prod",
         required=False
     )
 
@@ -33,6 +34,7 @@ def pre_processor():
 def test_processor():
     test_processor = TestProcessor()
     test_processor.reqres_api_service = ReqresApiClient()
+    test_processor.reqres_api_service.url_base = Config.REQRES_API_URL
     return test_processor
 
 

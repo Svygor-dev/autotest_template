@@ -3,7 +3,7 @@ import requests
 
 class ReqresApiClient:
 
-    url_base = "https://reqres.in"
+    url_base = None
 
     def __new__(cls):
         if not hasattr(cls, 'instance'):
